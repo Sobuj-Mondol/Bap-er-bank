@@ -5,7 +5,7 @@ document.getElementById('login-submit').addEventListener('click', function(){
     let passwordFild = document.getElementById('user-password');
     let userPassword = passwordFild.value;
     if(userEmail == 'sobuj@gmail.com' && userPassword == 12345){
-        window.location.href = 'Banking-site';
+        window.location.href = 'banking.html';
     }
     else{
         console.log('srroy sir your information not valid')
