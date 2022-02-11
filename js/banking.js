@@ -14,3 +14,18 @@ document.getElementById('Diposite-submit').addEventListener('click', function(){
     // clear the deposite input fild
     DipositeAmount.value = '';
 })
+
+document.getElementById('Withdraw-submit').addEventListener('click', function(){
+    let WithdrawInput = document.getElementById('Withdraw-Amount');
+    let newWithdraw = WithdrawInput.value;
+    let newWithdrawAmount = +newWithdraw;
+    console.log(newWithdrawAmount);
+    // set withdraw total
+    let withdrawTotal = document.getElementById('Withdraw-total');
+    let currentWithdraw = withdrawTotal.innerText;
+    let currentWithdrawTotal = +currentWithdraw;
+    let newWithdrawTotal = currentWithdrawTotal + newWithdrawAmount;
+    withdrawTotal.innerText = newWithdrawTotal;
+    // clear the Withdraw input file
+    WithdrawInput.value = '';
+})
