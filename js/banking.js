@@ -13,19 +13,15 @@ document.getElementById('Diposite-submit').addEventListener('click', function(){
     BalanceTotal.innerText = +currentBalanceAmount;
     // clear the deposite input fild
     DipositeAmount.value = '';
-})
+});
 
 document.getElementById('Withdraw-submit').addEventListener('click', function(){
     let WithdrawInput = document.getElementById('Withdraw-Amount');
-    let newWithdraw = WithdrawInput.value;
-    let newWithdrawAmount = +newWithdraw;
-    console.log(newWithdrawAmount);
-    // set withdraw total
-    let withdrawTotal = document.getElementById('Withdraw-total');
-    let currentWithdraw = withdrawTotal.innerText;
-    let currentWithdrawTotal = +currentWithdraw;
-    let newWithdrawTotal = currentWithdrawTotal + newWithdrawAmount;
-    withdrawTotal.innerText = newWithdrawTotal;
-    // clear the Withdraw input file
+    let WithdrawAmountText = WithdrawInput.value;
+    console.log(WithdrawAmountText);
+    // update Withdraw Total
+    let WithdrawTotal = document.getElementById('Withdraw-total');
+    let WithdrawTotalText = WithdrawTotal.innerText;
+    WithdrawTotal.innerText = WithdrawTotalText + WithdrawAmountText;
     WithdrawInput.value = '';
 })
