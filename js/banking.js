@@ -22,6 +22,8 @@ document.getElementById('Withdraw-submit').addEventListener('click', function(){
     // update Withdraw Total
     let WithdrawTotal = document.getElementById('Withdraw-total');
     let WithdrawTotalText = WithdrawTotal.innerText;
-    WithdrawTotal.innerText = WithdrawTotalText + WithdrawAmountText;
+    WithdrawTotal = WithdrawTotalText + WithdrawAmountText;
+    console.log(WithdrawTotal);
+    WithdrawTotal.innerText = WithdrawTotal;
     WithdrawInput.value = '';
-})
+});
